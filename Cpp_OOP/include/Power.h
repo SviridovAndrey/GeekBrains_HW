@@ -8,33 +8,22 @@
 #ifndef POWER_H_
 #define POWER_H_
 
-#include <iostream>
-#include <cmath>
+namespace Cpp_OOP
+{
+	class Power {
+	private:
+		int num = 0;
+		int pow = 0;
+	public:
+		Power();
 
-using namespace std;
+		Power(int number, int power);
 
-class Power {
-private:
-	int num = 0;
-	int pow = 0;
-public:
-	Power(){};
+		void set(int number, int power);
 
-	Power(int number, int power)
-		:num(number), pow(power)
-	{};
+		void calculate();
 
-	void set(int number, int power)
-	{
-		num = number;
-		pow = power;
-	}
-
-	void calculate(){
-		cout << "The number " << num << " to the power of " << pow << " is " << std::pow(num, pow) << endl;
-	}
-
-	~Power(){};
-};
-
+		~Power();
+	};
+}
 #endif /* POWER_H_ */
