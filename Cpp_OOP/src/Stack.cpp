@@ -53,6 +53,10 @@ void Stack::reset() {
 	}
 };
 
+bool Stack::test() {
+	return true;
+};
+
 Stack::~Stack() {
 	// TODO Auto-generated destructor stub
 	reset();
