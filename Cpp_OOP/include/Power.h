@@ -23,7 +23,7 @@ namespace Cpp_OOP
 
 		void calculate();
 
-		~Power();
+		virtual ~Power();
 	};
 }
 #endif /* POWER_H_ */

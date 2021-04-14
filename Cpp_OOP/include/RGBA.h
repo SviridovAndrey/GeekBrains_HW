@@ -23,7 +23,7 @@ namespace Cpp_OOP
 
 		void print();
 
-		~RGBA();
+		virtual ~RGBA();
 	};
 }
 #endif /* RGBA_H_ */
