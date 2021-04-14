@@ -21,11 +21,12 @@ namespace Cpp_OOP
 		int count;
 	public:
 		Stack();
-		void push(int value);
+		int getCount();
+		int peak();
 		int pop();
 		void print();
+		void push(int value);
 		void reset();
-		bool test();
 		virtual ~Stack();
 	};
 }

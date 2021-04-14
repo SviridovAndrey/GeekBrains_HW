@@ -17,14 +17,14 @@ Stack::Stack():count(0), head(0){
 	// TODO Auto-generated constructor stub
 	//head = new StackItem { 0, 0 };
 }
-void Stack::push(int value) {
-	StackItem* newItem = new StackItem{ value, 0 };
-	if(count > 0) {
-		StackItem* tmp = &(*head);
-		newItem->prevItem = tmp;
-	}
-	head = newItem;
-	count++;
+
+int Stack::getCount() {
+	return count;
+};
+
+int Stack::peak() {
+	assert(count > 0);
+	return head->value;;
 };
 
 int Stack::pop() {
@@ -47,14 +47,20 @@ void Stack::print() {
 	cout << ")" << endl;
 };
 
+void Stack::push(int value) {
+	StackItem* newItem = new StackItem{ value, 0 };
+	if(count > 0) {
+		StackItem* tmp = &(*head);
+		newItem->prevItem = tmp;
+	}
+	head = newItem;
+	count++;
+};
+
 void Stack::reset() {
 	while(count > 0){
 		pop();
 	}
-};
-
-bool Stack::test() {
-	return true;
 };
 
 Stack::~Stack() {
