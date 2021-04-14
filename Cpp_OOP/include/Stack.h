@@ -25,6 +25,7 @@ namespace Cpp_OOP
 		int pop();
 		void print();
 		void reset();
+		bool test();
 		virtual ~Stack();
 	};
 }

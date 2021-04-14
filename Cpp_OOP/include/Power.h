@@ -21,7 +21,7 @@ namespace Cpp_OOP
 
 		void set(int number, int power);
 
-		void calculate();
+		int calculate();
 
 		virtual ~Power();
 	};

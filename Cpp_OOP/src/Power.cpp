@@ -24,8 +24,10 @@ void Power::set(int number, int power) {
 	pow = power;
 };
 
-void Power::calculate() {
-	cout << "The number " << num << " to the power of " << pow << " is " << std::pow(num, pow) << endl;
+int Power::calculate() {
+	int result = std::pow(num, pow);
+	cout << "The number " << num << " to the power of " << pow << " is " << result << endl;
+	return result;
 };
 
 Power::~Power() {
