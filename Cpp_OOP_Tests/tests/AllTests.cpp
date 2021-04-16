@@ -6,8 +6,6 @@
  */
 
 #include "gtest/gtest.h"
-#include "StackTests.cpp"
-#include "PowerTests.cpp"
 
 int main(int argc, char** argv) {
 
