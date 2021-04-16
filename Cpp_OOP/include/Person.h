@@ -20,12 +20,17 @@ namespace Cpp_OOP {
 		float m_weight;	// вес
 	public:
 		Person();
-		Person(string& name, int age, string& sex, float weight);
-		void setName(string& name);
+		Person(const string& name, int age, const string& sex, float weight);
+		void setName(const string& name);
+		string getName() const;
 		void setAge(int age);
-		void setSex(string& sex);
+		int getAge() const;
+		void setSex(const string& sex);
+		string getSex() const;
 		void setWeight(float weight);
+		float getWeight() const;
 		virtual ~Person();
+		friend class PersonTest;
 	};
 
 } /* namespace Cpp_OOP */

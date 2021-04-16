@@ -6,6 +6,9 @@
  */
 
 #include "gtest/gtest.h"
+#include "StudentTest.cpp"
+#include "AppleTest.cpp"
+#include "BananaTest.cpp"
 
 int main(int argc, char** argv) {
 
