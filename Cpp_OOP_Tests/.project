@@ -35,10 +35,5 @@
 			<type>2</type>
 			<location>/home/user/Sources/GeekBrains_HW/Cpp_OOP/src</location>
 		</link>
-		<link>
-			<name>test</name>
-			<type>2</type>
-			<location>/home/user/Sources/GeekBrains_HW/Cpp_OOP/test</location>
-		</link>
 	</linkedResources>
 </projectDescription>
