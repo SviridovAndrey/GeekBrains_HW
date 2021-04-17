@@ -12,6 +12,11 @@
 #include "include/Rectangle.h"
 #include "include/Rhombus.h"
 #include "include/Square.h"
+#include "include/Car.h"
+#include "include/PassengerCar.h"
+#include "include/Bus.h"
+#include "include/Minivan.h"
+#include "include/MinivanV.h"
 
 using namespace std;
 using namespace Cpp_OOP;
@@ -24,7 +29,7 @@ int main(){
 	int taskNumber = 0;
 	cout << "Выберите номер задачи:" << endl;
 	cout << "1. Посчитать площади геометрических фигур;" << endl;
-	cout << "2. Создать классы Apple (яблоко) и Banana (банан), которые наследуют класс Fruit (фрукт);" << endl;
+	cout << "2. Создать классы с множественным наслндованием;" << endl;
 	cin >> taskNumber;
 
 	switch(taskNumber) {
@@ -101,6 +106,9 @@ void task_1() {
 };
 
 void task_2() {
-
-
+	Car car{"Some Car Company", "Some Car Model"};
+	PassengerCar passengerCar{"Some PassengerCar Company", "Some PassengerCar Model"};
+	Bus bus{"Some Bus Company", "Some Bus Model"};
+	Minivan minivan{"Some Minivan Company", "Some Minivan Model"};
+	MinivanV minivanV{"Some MinivanV Company", "Some MinivanV Model"};
 };
