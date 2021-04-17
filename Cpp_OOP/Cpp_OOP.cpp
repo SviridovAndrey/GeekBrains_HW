@@ -7,10 +7,11 @@
 
 #include <iostream>
 #include <cstdint>
-#include "include/Student.h"
-#include "include/Apple.h"
-#include "include/Banana.h"
-#include "include/GrannySmith.h"
+#include "include/Circle.h"
+#include "include/Parallelogram.h"
+#include "include/Rectangle.h"
+#include "include/Rhombus.h"
+#include "include/Square.h"
 
 using namespace std;
 using namespace Cpp_OOP;
@@ -22,7 +23,7 @@ int main(){
 
 	int taskNumber = 0;
 	cout << "Выберите номер задачи:" << endl;
-	cout << "1. Создать класс Person;" << endl;
+	cout << "1. Посчитать площади геометрических фигур;" << endl;
 	cout << "2. Создать классы Apple (яблоко) и Banana (банан), которые наследуют класс Fruit (фрукт);" << endl;
 	cin >> taskNumber;
 
@@ -42,48 +43,64 @@ int main(){
 }
 
 void task_1() {
-	cout << "Created " << Student::getStudentCount() << " student(s)." << endl;
-	Student *student1 = new Student("Anton", 18, "male", 75.5, 2020 );
+	char userChoice;
+	do {
+		cout << "Выберите фигуру:" << endl;
+		cout << "1 - параллепипед;" << endl;
+		cout << "2 - ромб;" << endl;
+		cout << "3 - прямоугольник;" << endl;
+		cout << "4 - квадрат;" << endl;
+		cout << "5 - круг." << endl;
+		cin >> userChoice;
 
-	cout << "Added " << student1->getName() << " " << student1->getAge() << " year old " << student1->getSex() << endl;
-	cout << "Created " << Student::getStudentCount() << " student(s)." << endl;
-
-	Student *student2 = new Student("Maria", 19, "female", 63.8, 2019 );
-
-	cout << "Added " << student2->getName() << " " << student2->getAge() << " year old " << student2->getSex() << endl;
-	cout << "Created " << Student::getStudentCount() << " student(s)." << endl;
-
-	Student student3("Mark", 21, "male", 79.2, 2018 );
-
-	cout << "Added " << student3.getName() << " " << student3.getAge() << " year old " << student3.getSex() << endl;
-	cout << "Created " << Student::getStudentCount() << " student(s)." << endl;
-
-	Student student4("Jone", 22, "male", 90, 2017 );
-
-	cout << "Added " << student4.getName() << " " << student4.getAge() << " year old " << student4.getSex() << endl;
-	cout << "Created " << Student::getStudentCount() << " student(s)." << endl;
-
-	Student student5("Klare", 17, "female", 58.3, 2021 );
-
-	cout << "Added " << student5.getName() << " " << student5.getAge() << " year old " << student5.getSex() << endl;
-	cout << "Created " << Student::getStudentCount() << " student(s)." << endl;
-
-	cout << "Removing " << student1->getName() << " " << student1->getAge() << " year old " << student1->getSex() << endl;
-	delete student1;
-	cout << "Created " << Student::getStudentCount() << " student(s)." << endl;
-
-	cout << "Removed " << student2->getName() << " " << student2->getAge() << " year old " << student2->getSex() << endl;
-	delete student2;
-	cout << "Created " << Student::getStudentCount() << " student(s)." << endl;
+		float side_1 = 0, side_2 = 0, angle = 0;
+		Figure *figure;
+		switch(userChoice){
+			case '1':
+				cout << "Введите две стороны и угол (20.5 15 45):" << endl;
+				cin >> side_1 >> side_2 >> angle;
+				figure = new Parallelogram(side_1, side_2, angle);
+				cout << "Площадь параллепипеда со сторонами " << side_1 << ", " << side_2 << " и углом " << angle << " равна:" << figure->area() << endl;
+				delete figure;
+				break;
+			case '2':
+				cout << "Введите сторону и угол (20.5 45):" << endl;
+				cin >> side_1 >> angle;
+				figure = new Rhombus(side_1, angle);
+				cout << "Площадь ромба со стороной " << side_1 << " и углом " << angle << " равна:" << figure->area() << endl;
+				delete figure;
+				break;
+			case '3':
+				cout << "Введите две стороны (20.5 15):" << endl;
+				cin >> side_1 >> side_2;
+				figure = new Rectangle(side_1, side_2);
+				cout << "Площадь рямоугольника со сторонами " << side_1 << ", " << side_2 << " равна:" << figure->area() << endl;
+				delete figure;
+				break;
+			case '4':
+				cout << "Введите сторону (20.5):" << endl;
+				cin >> side_1;
+				figure = new Square(side_1);
+				cout << "Площадь вадрата со стороной " << side_1 << " равна:" << figure->area() << endl;
+				delete figure;
+				break;
+			case '5':
+				cout << "Введите радиус (20.5):" << endl;
+				cin >> side_1;
+				figure = new Circle(side_1);
+				cout << "Площадь круга с радиусом " << side_1 << " равна:" << figure->area() << endl;
+				delete figure;
+				break;
+			default:
+				cout << "Выбор не определен" << endl;
+				break;
+		}
+		cout << "Продолжить (y/n)?:";
+		cin >> userChoice;
+	} while (userChoice == 'y');
 };
 
 void task_2() {
-	Apple a("red");
-	Banana b;
-	GrannySmith c;
 
-	std::cout << "My " << a.getName() << " is " << a.getColor() << ".\n";
-	std::cout << "My " << b.getName() << " is " << b.getColor() << ".\n";
-	std::cout << "My " << c.getName() << " is " << c.getColor() << ".\n";
 
 };

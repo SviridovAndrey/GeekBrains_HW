@@ -6,9 +6,11 @@
  */
 
 #include "gtest/gtest.h"
-#include "StudentTest.cpp"
-#include "AppleTest.cpp"
-#include "BananaTest.cpp"
+#include "CircleTest.cpp"
+#include "SquareTest.cpp"
+#include "RectangleTest.cpp"
+#include "ParallelogramTest.cpp"
+#include "RhombusTest.cpp"
 
 int main(int argc, char** argv) {
 
