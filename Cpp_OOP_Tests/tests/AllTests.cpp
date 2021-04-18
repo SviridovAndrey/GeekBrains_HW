@@ -11,6 +11,7 @@
 #include "RectangleTest.cpp"
 #include "ParallelogramTest.cpp"
 #include "RhombusTest.cpp"
+#include "FractionTest.cpp"
 
 int main(int argc, char** argv) {
 
