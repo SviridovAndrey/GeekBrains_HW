@@ -28,9 +28,9 @@ namespace Cpp_OOP {
 
 	TEST(FractionTest, FRACTION_TOMIXED_TEST) {
 		Fraction fr1{5,2};
-		std::cout << fr1 << std::endl;
+		//std::cout << fr1 << std::endl;
 		fr1.toMixed();
-		std::cout << fr1 << std::endl;
+		//std::cout << fr1 << std::endl;
 		ASSERT_EQ(2, fr1.getIntegerPart());
 		ASSERT_EQ(1, fr1.getNumerator());
 		ASSERT_EQ(2, fr1.getDenominator());
