@@ -44,6 +44,7 @@ namespace Cpp_OOP {
 
 		virtual ~Fraction();
 
+
 		friend std::ostream& operator<<(std::ostream& out, const Fraction &d1);
 	};
 
